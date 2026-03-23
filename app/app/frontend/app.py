@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask
 
 ##WSGI Application
 
@@ -10,7 +10,7 @@ def welcome():
 
 @app.route("/index")
 def index():
-    return render_template('index.html')
+    return "Welcome to the index page"
 
 if __name__=="__main__":
     app.run(debug=True, port=5001)
