@@ -17,3 +17,9 @@ data/raw/
 
 # Environment variables
 .env
+
+# W&B
+wandb/
+
+# Logs
+*.log
