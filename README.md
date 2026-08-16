@@ -584,4 +584,4 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Last Updated**: August 2024 | Built with ❤️ for emotion detection
+**Last Updated**: August 2026 | Built with ❤️ for emotion detection
