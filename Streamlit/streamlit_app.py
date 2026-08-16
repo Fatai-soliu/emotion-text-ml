@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import joblib
 import numpy as np
+from pathlib import Path
 
 st.set_page_config(layout="wide")
 
@@ -74,13 +75,30 @@ EXAMPLES = {
 }
 
 # --- Loading model -------------------
+# Project root
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Model paths
+MODEL_PATH = BASE_DIR / "models" / "svm_model.pkl"
+VECTORIZER_PATH = BASE_DIR / "models" / "tfidf_vectorizer.pkl"
+
+
 @st.cache_resource
 def load_model():
-    return joblib.load("./models/svm_model.pkl")
+    if not MODEL_PATH.exists():
+        st.error(f"Model not found at: {MODEL_PATH}")
+        st.stop()
+
+    return joblib.load(MODEL_PATH)
+
 
 @st.cache_resource
 def load_vectorizer():
-    return joblib.load("./models/tfidf_vectorizer.pkl")
+    if not VECTORIZER_PATH.exists():
+        st.error(f"Vectorizer not found at: {VECTORIZER_PATH}")
+        st.stop()
+
+    return joblib.load(VECTORIZER_PATH)
 
 model      = load_model()
 vectorizer = load_vectorizer()
