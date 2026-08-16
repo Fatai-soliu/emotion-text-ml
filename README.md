@@ -560,12 +560,6 @@ We welcome contributions! Here's how:
 
 ---
 
-## License
-
-This project is open source and available under the MIT License.
-
----
-
 ## Contact & Support
 
 **Questions or Issues?**
