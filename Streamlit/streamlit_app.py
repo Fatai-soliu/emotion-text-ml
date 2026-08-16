@@ -76,11 +76,11 @@ EXAMPLES = {
 # --- Loading model -------------------
 @st.cache_resource
 def load_model():
-    return joblib.load("/Users/soliufatai/Documents/PersonalDocuments/Data_Science_ML_AI_Krish_Naik/Complete-Data-Science-With-Machine-Learning-And-NLP-2024-main/2-Introduction/Intro/emotion-text-ml/models/svm_model.pkl")
+    return joblib.load("./models/svm_model.pkl")
 
 @st.cache_resource
 def load_vectorizer():
-    return joblib.load("/Users/soliufatai/Documents/PersonalDocuments/Data_Science_ML_AI_Krish_Naik/Complete-Data-Science-With-Machine-Learning-And-NLP-2024-main/2-Introduction/Intro/emotion-text-ml/models/tfidf_vectorizer.pkl")
+    return joblib.load("./models/tfidf_vectorizer.pkl")
 
 model      = load_model()
 vectorizer = load_vectorizer()
