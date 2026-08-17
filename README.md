@@ -1,5 +1,7 @@
 # 🎭 EmotionLens: Emotion Detection from Text
 
+**Go to webapp**: https://emotionlens.streamlit.app/
+
 A machine learning project that predicts emotions (Anger, Joy, Optimism, Sadness) from tweet text using Natural Language Processing and Support Vector Machines.
 
 **Status**: ✅ Working locally | 🚀 Ready for API/Cloud deployment
